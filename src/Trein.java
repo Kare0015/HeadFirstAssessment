@@ -18,7 +18,7 @@ public class Trein {
         String key = reiziger.getName();
         Reiziger value = reiziger;
         this.stoelen.put(key, value);
-        showInfo(reiziger, "is ingestapt");
+        showInfo(reiziger, " is ingestapt");
     }
 
     private void showInfo(Reiziger reiziger, String actie) {System.out.println(reiziger.getName() + actie); }

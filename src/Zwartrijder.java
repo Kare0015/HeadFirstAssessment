@@ -1,4 +1,6 @@
-public class Zwartrijder {
+public class Zwartrijder extends Reiziger{
 
-    public Zwartrijder(String name) { super(name); }
+    public Zwartrijder(String name){
+        super(name);
+    }
 }
