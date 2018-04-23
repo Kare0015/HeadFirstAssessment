@@ -13,6 +13,12 @@ public class Trein {
         instappen(reiziger7);
     }
 
+    public void instappen (Reiziger reiziger8, Reiziger reiziger9) {
+        instappen(reiziger8);
+        instappen(reiziger9);
+    }
+
+
     public void instappen(Reiziger reiziger) {
 
         String key = reiziger.getName();
@@ -23,12 +29,14 @@ public class Trein {
 
     private void showInfo(Reiziger reiziger, String actie) {System.out.println(reiziger.getName() + actie); }
 
+
     public Reiziger uitstappen(String name) {
 
         if (!stoelen.containsKey(name)) {
-            System.out.println(name + " zit niet in de bus.");
+            System.out.println(name + " zit niet in de trein.");
             return null;
         }
+
 
         Reiziger uitgestapte = stoelen.get(name);
         stoelen.remove(name);
@@ -37,7 +45,10 @@ public class Trein {
 
     }
 
+
     private int getReizigersCount() { return stoelen.size(); }
 
     public String toString() { return "Er zitten " +getReizigersCount()+" mensen in de trein"; }
+
+
 }
